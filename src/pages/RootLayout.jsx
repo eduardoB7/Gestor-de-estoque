@@ -4,11 +4,17 @@ export default function RootLayout() {
   return (
     <>
       <header>
-        REACT STOCK
-        <div className="links">
-          <Link to={"/"}>Inicio</Link>
-          <Link to={"/items"}>Items</Link>
-        </div>
+        <Link to="/" className="logo">
+          REACT STOCK
+        </Link>
+        <nav className="links-root">
+          <Link to={"/"}>
+            <h3>Inicio</h3>
+          </Link>
+          <Link to={"/items"}>
+            <h3>Items</h3>
+          </Link>
+        </nav>
       </header>
       <main>
         <Outlet />
