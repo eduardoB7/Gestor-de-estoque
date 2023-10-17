@@ -1,0 +1,22 @@
+:root {
+  --BG-color: #2c2c2d;
+  --color-default: #faf9f5;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--BG-color);
+  height: 100vh;
+  color: var(--color-default);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-default);
+}
