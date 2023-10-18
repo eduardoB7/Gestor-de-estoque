@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useStock from "../hook/useStock";
+import StockItem from "../module/StockItem";
 const CATEGORIES = ["jogos", "assessórios", "filmes", "hardware"];
 
 const defaultItem = {
@@ -21,6 +22,21 @@ export default function ItemsForm({ itemToUpdate }) {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
+    try {
+      const validItem = new StockItem(
+        item.name,
+        item.description,
+        item.quant,
+        item.price,
+        item.category
+      );
+
+      addItem(validItem);
+      setItem(defaultItem);
+    } catch (error) {
+      console.log(error.message);
+      alert("Ocorreu um erro.");
+    }
   };
 
   return (
