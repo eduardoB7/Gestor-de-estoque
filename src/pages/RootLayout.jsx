@@ -9,10 +9,10 @@ export default function RootLayout() {
         </Link>
         <nav className="links-root">
           <Link to={"/"}>
-            <h3>Inicio</h3>
+            <p>Inicio</p>
           </Link>
           <Link to={"/items"}>
-            <h3>Items</h3>
+            <p>Items</p>
           </Link>
         </nav>
       </header>
