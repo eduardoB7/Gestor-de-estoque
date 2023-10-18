@@ -11,8 +11,10 @@ export default function StockContextProvider({ children }) {
     return JSON.parse(storedItems);
   });
 
-  //   objeto que contera todos os items
-  const stock = {};
+  //   objeto que contera todos os ultilitarios do contexto
+  const stock = {
+    items,
+  };
 
   return (
     <StockContext.Provider value={stock}>{children}</StockContext.Provider>
