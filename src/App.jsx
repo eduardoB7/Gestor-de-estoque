@@ -5,7 +5,7 @@ import StockContextProvider from "./context/StockContext";
 function App() {
   return (
     <StockContextProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </StockContextProvider>
   );
 }
