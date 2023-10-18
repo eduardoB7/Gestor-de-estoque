@@ -38,8 +38,11 @@ header {
 .logo {
   display: inline-block;
   color: #fefefe;
-  padding: 1rem 0;
   text-decoration: none;
+}
+
+.links-root a {
+  padding: 1rem;
 }
 
 .links-root a:hover {
