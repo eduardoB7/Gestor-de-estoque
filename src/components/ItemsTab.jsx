@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useStock from "../hook/useStock";
+import DeleteBtn from "./DeleteBtn";
 
 export default function ItemsTab() {
   const { items } = useStock();
@@ -36,6 +37,7 @@ export default function ItemsTab() {
                 >
                   Atualizar
                 </Link>
+                <DeleteBtn itemId={item.id} itemName={item.name} />
               </td>
             </tr>
           ))}
