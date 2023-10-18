@@ -12,7 +12,7 @@ const defaultItem = {
 };
 
 export default function ItemsForm({ itemToUpdate }) {
-  const { addItem } = useStock();
+  const { items, addItem } = useStock();
 
   const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem);
 
@@ -23,16 +23,21 @@ export default function ItemsForm({ itemToUpdate }) {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     try {
-      const validItem = new StockItem(
-        item.name,
-        item.description,
-        item.quant,
-        item.price,
-        item.category
-      );
-
-      addItem(validItem);
-      setItem(defaultItem);
+      const invalidItem = items.filter((it) => it.name === item.name);
+      if (invalidItem.length === 0) {
+        const validItem = new StockItem(
+          item.name,
+          item.description,
+          item.quant,
+          item.price,
+          item.category
+        );
+        addItem(validItem);
+        alert("Item adicionado com sucesso!");
+        setItem(defaultItem);
+      } else {
+        alert("item ja existe no stock");
+      }
     } catch (error) {
       console.log(error.message);
       alert("Ocorreu um erro.");
