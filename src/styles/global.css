@@ -67,3 +67,63 @@ h1 {
 .active {
   border-bottom: solid 3px var(--color-default);
 }
+
+table {
+  border-collapse: collapse;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+thead {
+  background-color: #1c1a1d;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+tbody tr:hover {
+  background-color: rgba(28, 26, 29, 0.33);
+  cursor: default;
+}
+
+th,
+td {
+  /* border: 1px solid #fefefe; */
+  padding: 1.25rem;
+}
+
+.button {
+  background-color: #fefefe;
+  border-radius: 0.25rem;
+  border: 0;
+  color: #2c2c2d;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.button + .button {
+  margin-left: 0.75rem;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+.button.is-small {
+  font-size: 0.875rem;
+}
+
+.button.is-large {
+  font-size: 1.25rem;
+}
+
+.button.is-danger {
+  background-color: #ff5258;
+}
+
+.button.is-primary {
+  background-color: #5ba7fd;
+}
