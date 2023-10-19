@@ -37,12 +37,25 @@ export default function StockContextProvider({ children }) {
     return items.find((i) => i.id === itemId);
   };
 
+  const updateItem = (itemId, newAttributes) => {
+    setItems((current) => {
+      const itemIndex = current.findIndex((i) => i.id === itemId);
+      const updatedItems = [...current];
+      Object.assign(updatedItems[itemIndex], newAttributes, {
+        updatedAt: new Date(),
+      });
+      localStorage.setItem("stored-items", JSON.stringify(updatedItems));
+      return updatedItems;
+    });
+  };
+
   //   objeto que contera todos os ultilitarios do contexto
   const stock = {
     items,
     addItem,
     deleteItem,
     getItem,
+    updateItem,
   };
 
   return (
