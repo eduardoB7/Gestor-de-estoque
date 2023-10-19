@@ -17,22 +17,24 @@ export default function ShowItem() {
   }
 
   return (
-    <div className="item">
-      <h2>{item.name}</h2>
-      <Link to={`/items/${item.id}/update`} className="button is-small">
-        Atualizar
-      </Link>
-      <DeleteBtn itemId={item.id} itemName={item.name} />
-      <div className="row">
-        <span>Categoria {item.category}</span>
-        <span>Quantidade em estoque {item.quant}</span>
-        <span>Preço R${item.price}</span>
+    <>
+      <div className="item">
+        <h2>{item.name}</h2>
+        <Link to={`/items/${item.id}/update`} className="button is-small">
+          Atualizar
+        </Link>
+        <DeleteBtn itemId={item.id} itemName={item.name} />
+        <div className="row">
+          <span>Categoria {item.category}</span>
+          <span>Quantidade em estoque {item.quant}</span>
+          <span>Preço R${item.price}</span>
+        </div>
+        <p>{item.description}</p>
+        <p>
+          Cadastrado em: {item.createdAt.toLocaleDateString("pt-BR")} às{" "}
+          {item.createdAt.toLocaleTimeString()}
+        </p>
       </div>
-      <p>{item.description}</p>
-      <p>
-        Cadastrado em: {item.createdAt.toLocaleDateString("pt-BR")} às{" "}
-        {item.createdAt.toLocaleTimeString()}
-      </p>
-    </div>
+    </>
   );
 }
