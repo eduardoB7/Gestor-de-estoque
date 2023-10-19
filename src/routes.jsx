@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
-import Dahsboard from "./pages/Dahsboard";
+import Dashboard from "./pages/Dashboard";
 import ItemsLayout from "./pages/Items/Layout";
 import ShowItem from "./pages/Items/ShowItem";
 import UpdateItem from "./pages/Items/UpdateItem";
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dahsboard />,
+        element: <Dashboard />,
       },
       {
         path: "items",
