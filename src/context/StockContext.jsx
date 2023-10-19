@@ -28,11 +28,16 @@ export default function StockContextProvider({ children }) {
     });
   };
 
+  const getItem = (itemId) => {
+    return items.find((i) => i.id === +itemId);
+  };
+
   //   objeto que contera todos os ultilitarios do contexto
   const stock = {
     items,
     addItem,
     deleteItem,
+    getItem,
   };
 
   return (
