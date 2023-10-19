@@ -8,7 +8,7 @@ export default function Dahsboard() {
   const categories = new Set(items.map((item) => item.category));
   const numberOfDifferentCategories = categories.size;
 
-  const inventTotal = items.reduce((accum, item) => (accum += item.quant), 0);
+  const inventTotal = items.reduce((accum, item) => (accum += +item.quant), 0);
 
   const finishing = items.filter((item) => item.quant < 8);
 
