@@ -29,6 +29,11 @@ header {
   padding: 1rem 0;
 }
 
+#title-dashboard {
+  font-weight: 300;
+  font-size: 40px;
+}
+
 .links-root {
   display: flex;
 }
