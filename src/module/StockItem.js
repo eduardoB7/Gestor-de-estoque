@@ -18,5 +18,7 @@ export default class StockItem {
     this.quant = +quant;
     this.price = +price;
     this.category = category;
+    this.createdAt = new Date();
+    this.updatedAt = new Date();
   }
 }
