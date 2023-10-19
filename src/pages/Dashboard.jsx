@@ -1,3 +1,5 @@
+import FinTab from "../components/FinTab";
+import RecentTab from "../components/recenteTab";
 import useStock from "../hook/useStock";
 
 export default function Dahsboard() {
@@ -28,6 +30,10 @@ export default function Dahsboard() {
         <div className="dashboard-card">
           Itens acabando <span>{finishing.length}</span>
         </div>
+      </div>
+      <div className="tabsInfs">
+        <RecentTab />
+        <FinTab />
       </div>
     </>
   );
