@@ -77,6 +77,7 @@ export default function ItemsForm({ itemToUpdate }) {
             <input
               type="number"
               min={0}
+              step="0.01" // Adicione o atributo step com a precisão desejada
               name="price"
               id="price"
               required
