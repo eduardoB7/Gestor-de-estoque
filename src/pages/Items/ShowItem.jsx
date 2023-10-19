@@ -34,6 +34,10 @@ export default function ShowItem() {
           Cadastrado em: {item.createdAt.toLocaleDateString("pt-BR")} às{" "}
           {item.createdAt.toLocaleTimeString()}
         </p>
+        <p>
+          Atualizado em: {item.updatedAt.toLocaleDateString("pt-BR")} às{" "}
+          {item.updatedAt.toLocaleTimeString()}
+        </p>
       </div>
     </>
   );
