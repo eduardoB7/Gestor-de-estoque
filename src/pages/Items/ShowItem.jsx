@@ -29,6 +29,10 @@ export default function ShowItem() {
         <span>Preço R${item.price}</span>
       </div>
       <p>{item.description}</p>
+      <p>
+        Cadastrado em: {item.createdAt.toLocaleDateString("pt-BR")} às{" "}
+        {item.createdAt.toLocaleTimeString()}
+      </p>
     </div>
   );
 }
