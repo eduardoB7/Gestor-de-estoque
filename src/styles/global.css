@@ -190,3 +190,15 @@ select {
   margin: 1rem 0;
   text-align: center;
 }
+
+.tabsInfs {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.low,
+.recent {
+  width: 100%;
+}
