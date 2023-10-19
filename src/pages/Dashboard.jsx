@@ -10,7 +10,7 @@ export default function Dahsboard() {
 
   const inventTotal = items.reduce((accum, item) => (accum += +item.quant), 0);
 
-  const finishing = items.filter((item) => item.quant < 8);
+  const finishing = items.filter((item) => item.quant < 10);
 
   const recentItems = items.slice(0, 2);
 
