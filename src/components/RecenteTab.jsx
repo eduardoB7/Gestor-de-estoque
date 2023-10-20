@@ -6,6 +6,8 @@ export default function RecentTab() {
 
   const recentItems = items.slice(0, 2);
 
+  
+
   return (
     <>
       <div className="recent">
